@@ -1,0 +1,8 @@
+
+
+
+INSERT INTO students22 (id, name, age, grade) VALUES (12, 'John Doe', 20, 'A');
+INSERT INTO students22 (id, name, age, grade) VALUES (22, 'Jane Smith', 22, 'B');
+INSERT INTO students22(id, name, age, grade) VALUES (32, 'Emily Johnson', 19, 'A+');
+
+SELECT * FROM students22;
