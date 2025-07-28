@@ -1,0 +1,318 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Main Form Container */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Logo */
+.logo-container img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* Headings and Subtitles */
+h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Input Fields and Labels */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Profile Picture Upload */
+.profile-pic-group label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.profile-pic-group img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.profile-pic-group label:hover img {
+    border-color: #007bff;
+}
+
+#profile-pic-input {
+    display: none; /* Hides the default file input */
+}
+
+/* Side-by-side Name Fields */
+.name-group {
+    display: flex;
+    gap: 15px;
+}
+
+.name-group .input-group {
+    flex: 1;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Error Message and Login Link */
+.error-text {
+    color: #e74c3c;
+    min-height: 20px; /* Prevents layout shift */
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}/* Dark Theme Color Variables */
+:root {
+    --primary-blue: #4a69e2;
+    --primary-purple: #8e44ad;
+    --dark-bg: #1a1a2e;
+    --content-bg: #16213e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --border-color: rgba(142, 68, 173, 0.2);
+    --gradient-text: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --error-red: #e74c3c;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Main Form Container */
+.login-container {
+    background-color: var(--content-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Logo */
+.logo-container img {
+    width: 80px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px var(--primary-blue));
+}
+
+/* Headings and Subtitles */
+h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.subtitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+}
+
+/* Input Fields and Labels */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Profile Picture Upload */
+.profile-pic-group label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.profile-pic-group img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.profile-pic-group label:hover img {
+    border-color: var(--primary-blue);
+}
+
+#profile-pic-input {
+    display: none; /* Hides the default file input */
+}
+
+/* Side-by-side Name Fields */
+.name-group {
+    display: flex;
+    gap: 15px;
+}
+
+.name-group .input-group {
+    flex: 1;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background: var(--gradient-text);
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(74, 105, 226, 0.4);
+}
+
+/* Error Message and Login Link */
+.error-text {
+    color: var(--error-red);
+    min-height: 20px; /* Prevents layout shift */
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.login-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FocusQuest Loading</title>
+    <link rel="stylesheet" href="transition.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="transition-content">
+        <div class="logo-container">
+            <img src="logo.png" alt="FocusQuest Logo" />
+        </div>
+        <p class="tagline">Turn Your Time Into Treasures</p>
+    </div>
+
+    <script>
+        // Get the current URL's search parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Get the value of the 'redirect' parameter.
+        // If it doesn't exist, use 'dashboard.html' as a fallback.
+        const destination = urlParams.get('redirect') || 'dashboard.html';
+
+        // Wait for 2 seconds, then redirect to the determined destination
+        setTimeout(() => {
+            window.location.href = destination;
+        }, 2000);
+    </script>
+</body>
+</html>

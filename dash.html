@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusQuest Dashboard</title>
+  <link rel="stylesheet" href="dash.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="logo.png" alt="FocusQuest Logo" class="sidebar-logo" />
+        <h2>Focus<span class="gradient-text">Quest</span></h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="dash.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="transition.html?redirect=leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+          <li><a href="transition.html?redirect=analytics.html"><i class="fas fa-chart-line"></i> Analytics</a></li>
+          <li><a href="transition.html?redirect=profile.html"><i class="fas fa-user"></i> Profile</a></li>
+          <li class="logout"><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Today's Dashboard</h1>
+        <p>Stay focused, stay productive.</p>
+      </header>
+
+      <div class="content-grid">
+        <!-- Streak Card -->
+        <section class="card streak-card">
+          <div class="card-icon"><i class="fas fa-fire"></i></div>
+          <div class="card-content">
+            <p>Current Streak</p>
+            <div class="streak-days">0 <span>Days</span></div>
+          </div>
+        </section>
+
+        <!-- Tasks Card -->
+        <section class="card tasks-card">
+          <div class="card-header">
+            <h2>Today's Quests</h2>
+            <span id="task-counter">0/0 completed</span>
+          </div>
+          <div id="task-list" class="task-list-container">
+            <div class="no-tasks-content">
+              <p>Your quest log is empty. Add a task to begin!</p>
+            </div>
+          </div>
+          <button class="add-task-btn"><i class="fas fa-plus"></i> Add New Quest</button>
+        </section>
+
+        <!-- Rewards -->
+        <section class="card rewards-card">
+          <h2>Available Rewards</h2>
+          <div class="rewards-grid">
+            <div class="reward-item">
+              <img src="c1.webp" alt="Small Chest" class="chest-image" />
+              <h3>Small Chest</h3>
+              <p>1 task to go</p>
+            </div>
+            <div class="reward-item">
+              <img src="c2.png" alt="Silver Chest" class="chest-image" />
+              <h3>Silver Chest</h3>
+              <p>3 tasks to go</p>
+            </div>
+            <div class="reward-item">
+              <img src="c3.webp" alt="Golden Chest" class="chest-image" />
+              <h3>Golden Chest</h3>
+              <p>5 tasks to go</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add Task Modal -->
+  <div id="add-task-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>Add a New Quest</h2>
+      <form id="add-task-form">
+        <div class="form-group">
+          <label for="task-name">Quest Name</label>
+          <input type="text" id="task-name" required placeholder="e.g., Learn pointers" />
+        </div>
+        <div class="form-group">
+          <label>Time Estimate</label>
+          <div class="time-select-group">
+            <input type="number" id="task-hours" placeholder="Hours" min="0" value="0" />
+            <span>:</span>
+            <input type="number" id="task-minutes" placeholder="Minutes" min="1" value="30" />
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary">Add Quest</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Timer Modal -->
+  <div id="timer-modal" class="modal-overlay hidden">
+    <div class="modal-content timer-modal-content">
+      <h2 class="timer-task-name">Quest Timer</h2>
+      <div class="timer-clock">
+        <div class="progress-ring" id="progress-ring"></div>
+        <div class="time-display" id="time-display">00:00</div>
+      </div>
+      <div class="modal-actions">
+        <button id="pause-btn" class="btn-secondary">Pause</button>
+        <button id="cancel-timer-btn" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dash.js"></script>
+</body>
+</html>

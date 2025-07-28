@@ -1,0 +1,57 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at center, #2a2145 0%, #110e19 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.transition-content {
+    text-align: center;
+}
+
+.logo-container {
+    height: 180px;
+}
+
+.logo-container img {
+    max-height: 100%;
+    width: auto;
+    opacity: 0;
+    animation: slideFadeIn 0.8s ease-out forwards, pulsate 3s ease-in-out infinite;
+}
+
+.tagline {
+    color: #a09cb0;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Logo appears by sliding + fading in */
+@keyframes slideFadeIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+/* Slow pulsating effect */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

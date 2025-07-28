@@ -1,0 +1,232 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at center, #2a2145 0%, #110e19 100%);
+    color: #f0f0f0;
+    /* These three lines keep the entire login block centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    text-align: center;
+    /* NEW: This line shifts the entire container upwards */
+    transform: translateY(-50px);
+}
+
+/* Styles for a large logo */
+.logo-container {
+    height: 250px; 
+    margin: 0 auto 10px auto;
+}
+
+.logo-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #a09cb0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Input Fields and Labels */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #c0bdd1;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #110e19;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: 2px solid #8e44ad;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #5d3dbe;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b2fa1;
+}
+
+/* Error Message */
+.error-text {
+    color: #ff6b6b;
+    margin-top: 15px;
+    height: 20px;
+    font-size: 14px;
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at center, #2a2145 0%, #110e19 100%);
+    color: #f0f0f0;
+    /* These three lines keep the entire login block centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    text-align: center;
+    /* NEW: This line shifts the entire container upwards */
+    transform: translateY(-50px);
+}
+
+/* Styles for a large logo */
+.logo-container {
+    height: 250px;
+    margin: 0 auto 10px auto;
+}
+
+.logo-container img {
+    max-height: 100%;
+    width: auto;
+    /* MODIFIED: Added animation for a pulsating effect */
+    animation: pulsate 1.5s ease-in-out infinite;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #a09cb0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Input Fields and Labels */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #c0bdd1;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #110e19;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: 2px solid #8e44ad;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #5d3dbe;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b2fa1;
+}
+
+/* Error Message */
+.error-text {
+    color: #ff6b6b;
+    margin-top: 15px;
+    height: 20px;
+    font-size: 14px;
+}
+
+/* NEW: Added keyframes for the pulsating animation */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slightly smaller pulse than transition page */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
